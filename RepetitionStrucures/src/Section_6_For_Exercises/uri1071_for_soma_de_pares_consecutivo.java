@@ -3,7 +3,7 @@ package Section_6_For_Exercises;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class uri1071_for_soma_de_pares_consecutivos_1 {
+public class uri1071_for_soma_de_pares_consecutivo {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 

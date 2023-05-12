@@ -1,4 +1,11 @@
+package Section_4_SequenceStructures;
+
 import java.util.Scanner;
+
+/*
+ Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma
+ mensagem explicativa, conforme exemplos.
+*/
 
 public class uri1003_soma_de_dois_valores {
 

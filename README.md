@@ -1,4 +1,4 @@
-## 📚 <a href="https://github.com/salvedojuliao/java_exercises/tree/main/Enumeracoes_Composicao"> Exercises of Compositions + Enums </a>
+## 📚 <a href="https://github.com/salvedojuliao/java_exercises/tree/main/Enumeracoes_Composicao"> Compositions & Enums Exercises </a>
 ![exercise](https://github.com/salvedojuliao/java_exercises/assets/44206400/22630794-8d46-4c64-9884-ce1146e42fe8)
 - I Considere this exercise a good one to explore this topic of the language
 - My solution: <b><a href="https://github.com/salvedojuliao/java_exercises/blob/main/Enumeracoes_Composicao/src/application/OrderProgram.java"> Order Program </a></b>

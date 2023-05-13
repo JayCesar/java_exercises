@@ -1,7 +1,7 @@
 package entities.enums;
 
 public enum OrderStatus {
-	PENDING_PAYMENTS,
+	PENDING_PAYMENT,
 	PROCESSING,
 	SHIPPED,
 	DELIVERED;

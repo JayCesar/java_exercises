@@ -1,10 +1,11 @@
 package entities;
 
-public class OrderItem {
+public class OrderItem{
 	
 	private Integer quantity;
 	private Double price;
 	
+	// Composition relationship:
 	private Product product;
 	
 	public OrderItem() {}
@@ -39,16 +40,19 @@ public class OrderItem {
 		this.product = product;
 	}
 
-	// Métodos
 	public double subTotal() {
-		return quantity * price;
+		return price * quantity;
 	}
 
 	@Override
 	public String toString() {
-		return product + " Quantity: " + quantity + ", Subtotal: $" + String.format("%.2f", subTotal());
+		return product + "," 
+				+ "$" + String.format("%.2f", price) 
+				+ ", Quantity: " 
+				+ quantity 
+				+ ", Subtotal: " 
+				+ "$" + String.format("%.2f", subTotal());  
 	}
-
 	
 	
 }

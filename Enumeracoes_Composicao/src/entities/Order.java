@@ -7,17 +7,17 @@ import java.util.List;
 
 import entities.enums.OrderStatus;
 
-public class Order {
+public class Order{
 	
-	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:MM:ss");
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	
 	private Date moment;
 	private OrderStatus status;
 	
-	// Associação
+	// Composition relationship
 	private Client client;
-	List<OrderItem> itemList = new ArrayList<>();
-
+	List<OrderItem> itemsList = new ArrayList<>();
+	
 	public Order() {}
 
 	public Order(Date moment, OrderStatus status, Client client) {
@@ -42,41 +42,47 @@ public class Order {
 		this.status = status;
 	}
 
-	// Métodos
+	public Client getClient() {
+		return client;
+	}
+
+	public void setClient(Client client) {
+		this.client = client;
+	}
+
 	public void addItem(OrderItem item) {
-		itemList.add(item);
+		itemsList.add(item);
 	}
 	
-	public void remove(OrderItem item) {
-		itemList.remove(item);
+	public void removeItem(OrderItem item) {
+		itemsList.remove(item);
 	}
-
+	
 	public double total() {
-		double total = 0.0;
-		for (OrderItem item : itemList) {
-			total += item.subTotal();
+		double sum = 0.0;
+		for(OrderItem item : itemsList) {
+			sum += item.subTotal();
 		}
-		return total;
+		return sum;
 	}
-
-	@Override
+	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Order moment: ");
-		sb.append(sdf.format(moment) + "\n");
-		sb.append("Order status: ");
-		sb.append(status + "\n");
-		sb.append("Client: ");
-		sb.append(client + "\n");
-		sb.append("Order items: \n");
-		for (OrderItem item : itemList) {
-			sb.append(item + "\n");
-		}
-		sb.append("Total price: $");
-		sb.append(String.format("%.2f", total()));
+			sb.append("Order moment:" );
+			sb.append(sdf.format(moment) + "\n");
+			sb.append("Order status:" );
+			sb.append(status + "\n");
+			sb.append("Client: ");
+			sb.append(client + "/n");
+			sb.append("Order items:" );
+				for (OrderItem item : itemsList) {
+					sb.append(item + "/n");
+				}
+			
+			sb.append("Total price: ");
+			sb.append("$" + String.format("%.2f", total()));
+		
 		return sb.toString();
 	}
-
-	
 	
 }

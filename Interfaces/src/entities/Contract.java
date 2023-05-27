@@ -10,9 +10,9 @@ public class Contract {
 	private LocalDate date;
 	private Double totalValue;
 	
-	// Assossiation / Composition relationship
-	List<Installment> instalments = new ArrayList<>();
-	
+	// Assotiation / Coposition relationship
+	List<Installment> intallments = new ArrayList<>();
+
 	public Contract() {}
 
 	public Contract(Integer number, LocalDate date, Double totalValue) {
@@ -45,13 +45,8 @@ public class Contract {
 		this.totalValue = totalValue;
 	}
 
-	public List<Installment> getInstalments() {
-		return instalments;
+	public List<Installment> getIntallments() {
+		return intallments;
 	}
 
-	
-	
-	
-	
-	
 }

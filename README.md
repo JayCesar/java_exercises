@@ -5,5 +5,7 @@
   - My solution **(CODE):** <b><a href="https://github.com/JayCesar/java_exercises/blob/main/Enumeracoes_Composicao/src/application/OrderProgram.java"> Order Program Code </a></b>
 ***
 
-## 📚 <a href="https://github.com/salvedojuliao/java_exercises/tree/main/Logica_de_Programacao_Inicio/src/section5_ConditionalDecision"> Conditional Decision Exercises </a>
-> Calcula a média de idade em um grupo aleatório: <b><a href="https://github.com/salvedojuliao/java_exercises/blob/main/Logica_de_Programacao_Inicio/src/section5_ConditionalDecision/calcula_media_de_idade_em_um_grupo_aleatorio.java"> ir para o exercício </a></b>
+## 📚 <a href="https://github.com/JayCesar/java_exercises/tree/main/Interfaces/src"> Interface Exercise </a>
+> Instancia um contrato e gera a quantidade de parcelas solicitada 
+>
+![2023-05-28_11h52_22](https://github.com/JayCesar/java_exercises/assets/44206400/5f6905d5-99a7-4e32-902d-59b68aff7bba)

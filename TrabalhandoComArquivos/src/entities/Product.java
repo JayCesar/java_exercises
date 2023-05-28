@@ -6,7 +6,7 @@ public class Product {
 	private Integer quantity;
 	
 	public Product() {}
-	
+
 	public Product(String name, Double price, Integer quantity) {
 		this.name = name;
 		this.price = price;
@@ -37,8 +37,8 @@ public class Product {
 		this.quantity = quantity;
 	}
 
-	public double total() {
-		return price * quantity;
+	public Double total() {
+		return quantity * price;
 	}
 	
 }

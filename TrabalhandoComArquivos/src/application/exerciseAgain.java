@@ -13,32 +13,33 @@ import java.util.Scanner;
 
 import entities.Product;
 
-public class exercise {
-	
-	public static void main (String[] args) {
+public class exerciseAgain {
+
+	public static void main(String[] args) {
 		// D:\\workspace\\ws-eclipse\\java_exercises\\TrabalhandoComArquivos\\files_ex\\input.csv
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
 		List<Product> list = new ArrayList<>();
 		
-		System.out.println("Enter file path: ");
-		String sourceFileStr = sc.nextLine();
+		System.out.println("Enter with the file path: ");
+		String sourceFileStr = sc.next();
 		
 		File sourceFile = new File(sourceFileStr);
 		
-		String sourceFolderStr = sourceFile.getParent(); 
-		// Despreza o nome do arquivo - pega só o caminho
+		String sourceFolderStr = sourceFile.getParent();
+		// Despreza o nome do arquivo e pega apenas o caminho
 		
-		// Criando uma pasta
+		// Criando Pasta
 		boolean success = new File(sourceFolderStr + "\\out").mkdir();
 		
-		String targetFileStr = sourceFolderStr + "\\out\\summary.csv";
+		// Criando o arquivo
+		String targetFileStr = sourceFolderStr + "\\out\\sumarry.csv";
 		
 		try(BufferedReader br = new BufferedReader(new FileReader(sourceFileStr))){
 			
 			String itemCsv = br.readLine();
-			while (itemCsv != null) {
+			while(itemCsv != null) {
 				String[] fields = itemCsv.split(",");
 				String name = fields[0];
 				double price = Double.parseDouble(fields[1]);
@@ -49,22 +50,22 @@ public class exercise {
 			}
 			
 			// Agora vou escrever no arquivo
-			try (BufferedWriter bw = new BufferedWriter(new FileWriter(targetFileStr))){
-				for (Product item : list) {
+			try(BufferedWriter bw = new BufferedWriter(new FileWriter(targetFileStr))){
+				for(Product item : list) {
 					bw.write(item.getName() + "," + String.format("%.2f", item.total()));
 					bw.newLine();
 				}
 			}
-			catch(IOException e) {
+			catch(IOException e){
 				System.out.println("Error writing file: " + e.getMessage());
 			}
-			
 		}
 		catch(IOException e) {
 			System.out.println("Error writing file: " + e.getMessage());
 		}
-			
+
 		sc.close();
+
 	}
-	
+
 }

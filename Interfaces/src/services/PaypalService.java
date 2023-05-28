@@ -1,6 +1,6 @@
 package services;
 
-public class PaypalService implements OnlinePaymentService {
+public class PaypalService implements OnlinePaymentService{
 
 	@Override
 	public double paymentFee(double amount) {

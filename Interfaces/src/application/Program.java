@@ -10,13 +10,14 @@ import entities.Installment;
 import services.ContractService;
 import services.PaypalService;
 
+
 public class Program {
 
 	public static void main(String[] args) {
 		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		
+	
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		
 		System.out.println("Entre com os dados do contrato: ");
@@ -27,16 +28,18 @@ public class Program {
 		System.out.print("Valor do contrato: ");
 		double totalValue = sc.nextDouble();
 		
-		Contract obj = new Contract(number, date, totalValue);
+		Contract contract = new Contract(number, date, totalValue);
 		
 		System.out.print("Entre com o número de parcelas: ");
-		int n = sc.nextInt();
+		int installmentsAmount = sc.nextInt();
+		
+		System.out.println("Parcelas:");
 		
 		ContractService contractService = new ContractService(new PaypalService());
 		
-		contractService.processContract(obj, n);
+		contractService.processContract(contract, installmentsAmount);
 		
-		for (Installment installment : obj.getIntallments()) {
+		for (Installment installment : contract.getInstallments()) {
 			System.out.println(installment);
 		}
 		

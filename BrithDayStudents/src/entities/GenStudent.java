@@ -53,6 +53,7 @@ public class GenStudent {
 	@Override
 	public String toString() {
 		StringBuilder  sb = new StringBuilder();
+			sb.append("Nome: " + getName() + "\n");
 			sb.append("Data de nascimento: " + getBirthDate() + "\n");
 			sb.append("Signo: " + getSign() + "\n");
 			sb.append("Link/Música: " + getSongLink() + "\n");
